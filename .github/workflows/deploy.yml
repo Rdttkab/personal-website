@@ -18,19 +18,12 @@ jobs:
 
       - name: Build my App
         run: npm run build
-
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
       
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: out/
-        server-dir: public_html/
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: out/
+          server-dir: public_html/
