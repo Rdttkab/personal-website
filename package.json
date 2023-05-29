@@ -20,7 +20,6 @@
   "devDependencies": {
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
-    "@types/tailwindcss": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "eslint-config-next": "^13.4.3",
     "postcss": "^8.4.23",
